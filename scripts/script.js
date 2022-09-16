@@ -27,7 +27,6 @@ window.onload=()=>{
             selected=type;
             selectedId=id;
         }
-        console.log(selected+" "+id);
     }
     // flip card
     const cardFlip=(id)=>{
