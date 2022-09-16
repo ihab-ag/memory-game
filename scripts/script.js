@@ -1,10 +1,13 @@
 window.onload=()=>{
     // html elements
     const game=document.querySelector('.game');
+    const scoreBoard=document.getElementById('score-board');
     // declarables
     let cards=['html','css','js','css','js','html'];
     let selected='';
     let selectedId='' ;
+    let cardsLeft=3;
+    let score=0;
     // functions
     // suffle cards order
     const shuffle=()=>{
@@ -40,6 +43,8 @@ window.onload=()=>{
         for(const el of typeClass){
             el.parentElement.style.display = 'none';
         }
+        cardsLeft--;
+        checkWin();
     }
     // create cards
     const createCard=(type,id)=>{
@@ -64,10 +69,22 @@ window.onload=()=>{
     }
     // start game
     const startGame=()=>{
+        game.innerHTML="";
         shuffle();
         for(const key in cards){
             createCard(cards[key],key);
         }
     }
+    // check win
+    const checkWin=()=>{
+        if(cardsLeft==0){
+            cardsLeft=3;
+            score++;
+            scoreBoard.innerText=score;
+            startGame();
+        }
+    }
+    // main
+    scoreBoard.innerText=score;
     startGame();
 }
