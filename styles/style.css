@@ -50,10 +50,27 @@ img{
     background-size: cover;
 }
 .pic-bg{
-    background-color: black;
     transform: rotateY(180deg);
 }
 .card:hover .card-inner{
     cursor: pointer;
     transform: rotateY(180deg);
+}
+.html{
+    background: url('../content/HTML.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.css{
+    background: url('../content/CSS.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.js{
+    background: url('../content/JS.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
