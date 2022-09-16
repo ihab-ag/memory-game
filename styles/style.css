@@ -29,4 +29,12 @@ img{
 .card{
     height:40vw;
     border: 1px solid;
+    perspective: 1000px;
+}
+.card-inner{
+    position:relative;
+    height:100%;
+    width:100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
