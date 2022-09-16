@@ -1,4 +1,6 @@
 window.onload=()=>{
+    // html elements
+    const game=document.querySelector('.game');
     // declarables
     let cards=['html','css','js','css','js','html'];
     let selected='';
@@ -31,5 +33,24 @@ window.onload=()=>{
             el.parentElement.style.display = 'none';
         }
     }
-    
+    // create cards
+    const createCard=(type,id)=>{
+        // create divs
+        const card= document.createElement('div');
+        const cardInner= document.createElement('div');
+        const question=document.createElement('div');
+        const pic=document.createElement('div');
+        // add classes and id
+        card.classList='card';
+        cardInner.classList='card-inner';
+        cardInner.setAttribute('id',id);
+        question.classList='question-bg';
+        pic.classList=`pic-bg ${type}`;
+        // nest divs
+        cardInner.appendChild(question);
+        cardInner.appendChild(pic);
+        card.appendChild(cardInner);
+        // add to game
+        game.appendChild(card);
+    }
 }
