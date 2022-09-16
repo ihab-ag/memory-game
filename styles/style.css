@@ -55,7 +55,6 @@ img{
 }
 .card:hover .card-inner{
     cursor: pointer;
-    transform: rotateY(180deg);
 }
 .html{
     background: url('../content/HTML.png');
