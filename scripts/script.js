@@ -19,5 +19,11 @@ window.onload=()=>{
     const cardFlip=(id)=>{
         document.getElementById(id).style.transform='rotateY(180deg)';
     }
-    
+    // remove cards by classs
+    const removeCards=(type)=>{
+        const typeClass=document.querySelectorAll(`.${type}`);
+        for(const el of typeClass){
+            el.parentElement.style.display = 'none'
+        }
+    }
 }
