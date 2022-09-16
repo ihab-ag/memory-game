@@ -40,8 +40,9 @@ window.onload=()=>{
         const cardInner= document.createElement('div');
         const question=document.createElement('div');
         const pic=document.createElement('div');
-        // add classes and id
+        // add attributes
         card.classList='card';
+        card.onclick=()=> select(type,id);
         cardInner.classList='card-inner';
         cardInner.setAttribute('id',id);
         question.classList='question-bg';
@@ -53,4 +54,12 @@ window.onload=()=>{
         // add to game
         game.appendChild(card);
     }
+    // start game
+    const startGame=()=>{
+        shuffle();
+        for(const key in cards){
+            createCard(cards[key],key);
+        }
+    }
+    startGame();
 }
