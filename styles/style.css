@@ -28,7 +28,6 @@ img{
 }
 .card{
     height:40vw;
-    border: 1px solid;
     perspective: 1000px;
 }
 .card-inner{
@@ -43,4 +42,18 @@ img{
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
+}
+.question-bg{
+    background: url('../content/question.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pic-bg{
+    background-color: black;
+    transform: rotateY(180deg);
+}
+.card:hover .card-inner{
+    cursor: pointer;
+    transform: rotateY(180deg);
 }
