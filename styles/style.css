@@ -10,10 +10,11 @@ img{
 /* header */
 .header{
     padding: 5%;
+    height: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     background-color: #47bbfd;
     color: #f1f0f0;
 }
@@ -27,7 +28,7 @@ img{
     row-gap: 10px;
 }
 .card{
-    height:40vw;
+    height:40vh;
     perspective: 1000px;
 }
 .card-inner{
@@ -66,7 +67,7 @@ img{
     background: url('../content/CSS.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .js{
     background: url('../content/JS.png');
