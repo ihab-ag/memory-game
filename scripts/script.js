@@ -1,4 +1,6 @@
 window.onload=()=>{
-    console.log('ello')
-
+    // declarables
+    let cards=['html','css','js','css','js','html'];
+    
+    
 }
