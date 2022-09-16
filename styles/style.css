@@ -28,7 +28,7 @@ img{
     row-gap: 10px;
 }
 .card{
-    height:40vh;
+    height:30vh;
     perspective: 1000px;
 }
 .card-inner{
@@ -48,7 +48,7 @@ img{
     background: url('../content/question.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .pic-bg{
     transform: rotateY(180deg);
@@ -61,7 +61,7 @@ img{
     background: url('../content/HTML.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .css{
     background: url('../content/CSS.png');
@@ -73,5 +73,5 @@ img{
     background: url('../content/JS.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
