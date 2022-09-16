@@ -4,7 +4,7 @@ window.onload=()=>{
     // declarables
     let cards=['html','css','js','css','js','html'];
     let selected='';
-    let selectedId ;
+    let selectedId='' ;
     // functions
     // suffle cards order
     const shuffle=()=>{
@@ -13,18 +13,26 @@ window.onload=()=>{
     // select function
     const select=(type,id)=>{
         cardFlip(id);
-        if(selected==type){
-            removeCards(type);
+        if(selected==type&&selectedId!=id){
+            setTimeout(removeCards,1000,type);
             selected='';
         }
         else{
-            cardFlip(selectedId);
+            if(selectedId!=''){
+                cardClose(selectedId);
+            }
             selected=type;
+            selectedId=id;
         }
+        console.log(selected+" "+id);
     }
     // flip card
     const cardFlip=(id)=>{
         document.getElementById(id).style.transform='rotateY(180deg)';
+    }
+    // close card
+    const cardClose=(id)=>{
+        document.getElementById(id).style.transform='rotateY(0)';
     }
     // remove cards by class
     const removeCards=(type)=>{
